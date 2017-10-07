@@ -13,12 +13,15 @@ defmodule TestProbe.Mixfile do
   def application, do: []
 
   defp deps, do: [
-    {:monex, "~> 0.1.10"}
+    {:monex, "~> 0.1.10"},
+    {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
+    {:dialyxir, "~> 0.5.1", only: :dev, runtime: false}
   ]
 
   defp description do
     """
-    TestProbe for mocking Elixir processes
+    TestProbe is a tiny wrapper around GenServer, that puts testing of actor
+    interactions under control.
     """
   end
 

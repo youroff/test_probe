@@ -1,4 +1,6 @@
 defmodule TestProbe.Server do
+  @moduledoc false
+
   use GenServer
   import MonEx.{Option, Result}
   alias TestProbe.Message
